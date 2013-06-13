@@ -152,4 +152,15 @@ public class User{
     public void setID(String ID) {
         this.ID = ID;
     }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", attributes=" + attributes +
+                ", password='" + password + '\'' +
+                ", ID='" + ID + '\'' +
+                '}';
+    }
 }

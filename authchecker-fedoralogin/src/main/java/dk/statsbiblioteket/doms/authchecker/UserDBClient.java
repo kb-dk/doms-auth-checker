@@ -14,6 +14,8 @@ import dk.statsbiblioteket.doms.authchecker.exceptions.InvalidCredentialsExcepti
 import dk.statsbiblioteket.doms.authchecker.exceptions.BackendException;
 import dk.statsbiblioteket.doms.authchecker.exceptions.ResourceNotFoundException;
 import dk.statsbiblioteket.doms.authchecker.exceptions.FedoraException;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import javax.ws.rs.core.Response;
 import static javax.ws.rs.core.Response.Status.FORBIDDEN;
@@ -26,6 +28,9 @@ import static javax.ws.rs.core.Response.Status.FORBIDDEN;
  * To change this template use File | Settings | File Templates.
  */
 public class UserDBClient {
+
+    private static final Log logger =
+            LogFactory.getLog(UserDBClient.class);
 
 
     private static Client client = Client.create();
@@ -41,11 +46,14 @@ public class UserDBClient {
             throws BackendException {
 
         try {
+            logger.debug("Getting roles for user "+username);
             User user = restApi.path("/getRolesForUser/")
                     .path(URLEncoder.encode(username,"UTF-8"))
                     .path("/withPassword/")
                     .path(URLEncoder.encode(password,"UTF-8"))
                     .get(User.class);
+            logger.debug("Gotten this user object "+user);
+
             HashMap<String, Set<String>> map;
             map = new HashMap<String, Set<String>>();
             for (Roles roles : user.getAttributes()) {
@@ -54,8 +62,12 @@ public class UserDBClient {
                 set.addAll(roles.getRoles());
                 map.put(roles.getAssociation(),set);
             }
+            if (logger.isDebugEnabled()){
+                for (String key : map.keySet()) {
+                    logger.debug("user have attributes for key " + key+map.get(key));
+                }
+            }
             return map;
-
         } catch (UnsupportedEncodingException e) {
             throw new Error("UTF-8 not known on this platform",e);
         } catch (UniformInterfaceException e){
