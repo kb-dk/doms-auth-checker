@@ -1,4 +1,4 @@
-0.0.13
+1.0
 Updated to work with fedora 3.6.2 for the newspaper project
 cb5b03c	6/13/13 2:23 PM	Asger Askov Blekinge	Made the auththing for fedora bundle to prevent maven dependency problems in the installer
 3e7e1a9	6/13/13 1:16 PM	Asger Askov Blekinge	Updated to newer fedora 3.6.2 and newer non-provided jersey
