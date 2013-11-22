@@ -1,3 +1,9 @@
+0.0.13
+Updated to work with fedora 3.6.2 for the newspaper project
+cb5b03c	6/13/13 2:23 PM	Asger Askov Blekinge	Made the auththing for fedora bundle to prevent maven dependency problems in the installer
+3e7e1a9	6/13/13 1:16 PM	Asger Askov Blekinge	Updated to newer fedora 3.6.2 and newer non-provided jersey
+1aa01d2	6/13/13 1:15 PM	Asger Askov Blekinge	toStrings and logging added
+
 0.0.12:
 Add methods for checking access using URL. Update dependency on jersey to newer version.
 c2bf3b2 2012-11-28 10:37:32 +0100       Kåre Fiedler Christiansen       Added changelog
