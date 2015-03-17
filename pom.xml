@@ -29,10 +29,9 @@
 
         <dependencies>
             <dependency>
-                <groupId>dk.statsbiblioteket.doms.domsutil</groupId>
-                <artifactId>domsutil-bundle</artifactId>
-                <version>1.0</version>
-                <type>pom</type>
+                <groupId>dk.statsbiblioteket.sbutil</groupId>
+                <artifactId>sbutil-webservices-common</artifactId>
+                <version>0.5.29</version>
             </dependency>
             <dependency>
                 <groupId>javax.ws.rs</groupId>

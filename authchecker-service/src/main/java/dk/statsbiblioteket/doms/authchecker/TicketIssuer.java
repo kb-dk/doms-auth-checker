@@ -5,7 +5,7 @@ import dk.statsbiblioteket.doms.authchecker.exceptions.MissingArgumentException;
 import dk.statsbiblioteket.doms.authchecker.ticketissuer.Ticket;
 import dk.statsbiblioteket.doms.authchecker.ticketissuer.TicketNotFoundException;
 import dk.statsbiblioteket.doms.authchecker.ticketissuer.TicketSystem;
-import dk.statsbiblioteket.doms.webservices.configuration.ConfigCollection;
+import dk.statsbiblioteket.sbutil.webservices.configuration.ConfigCollection;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

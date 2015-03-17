@@ -14,7 +14,7 @@ import dk.statsbiblioteket.doms.authchecker.exceptions.MissingArgumentException;
 import dk.statsbiblioteket.doms.authchecker.exceptions.ResourceNotFoundException;
 import dk.statsbiblioteket.doms.authchecker.user.Roles;
 import dk.statsbiblioteket.doms.authchecker.user.User;
-import dk.statsbiblioteket.doms.webservices.configuration.ConfigCollection;
+import dk.statsbiblioteket.sbutil.webservices.configuration.ConfigCollection;
 
 import javax.ws.rs.core.MultivaluedMap;
 import java.util.List;

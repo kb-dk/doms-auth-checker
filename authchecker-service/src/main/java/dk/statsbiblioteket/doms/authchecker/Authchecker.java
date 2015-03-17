@@ -14,7 +14,7 @@ import dk.statsbiblioteket.doms.authchecker.fedoraconnector.FedoraConnector;
 import dk.statsbiblioteket.doms.authchecker.user.Roles;
 import dk.statsbiblioteket.doms.authchecker.user.User;
 import dk.statsbiblioteket.doms.authchecker.userdatabase.UserDatabase;
-import dk.statsbiblioteket.doms.webservices.configuration.ConfigCollection;
+import dk.statsbiblioteket.sbutil.webservices.configuration.ConfigCollection;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
